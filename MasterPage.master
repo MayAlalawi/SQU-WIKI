@@ -1,0 +1,257 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title><link rel="stylesheet" href="style.css" />
+    
+   
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder> <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="SQU_AD, WOW Slider, Slideshow Website, Slideshow Generator" />
+	<meta name="description" content="SQU_AD created with WOW Slider, a free wizard program that helps you easily generate beautiful web slideshow" />
+	<!-- Start WOWSlider.com HEAD section -->
+	<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+	<script type="text/javascript" src="engine1/jquery.js"></script>
+	<!-- End WOWSlider.com HEAD section -->
+    
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+
+    <div class="BodyContent">
+
+    <div class="BorderBorder"><div class="BorderBL"><div></div></div><div class="BorderBR"><div></div></div><div class="BorderTL"></div><div class="BorderTR"><div></div></div><div class="BorderT"></div><div class="BorderR"><div></div></div><div class="BorderB"><div></div></div><div class="BorderL"></div><div class="BorderC"></div><div class="Border">
+
+        <div class="Header">
+          <div class="HeaderTitle">
+                    <h1><a href="#"> &nbsp;</a></h1>
+                 <h2>&nbsp;</h2>
+          </div>
+        </div>
+            <div class="loginDisplay">
+                
+               <asp:Label ID="userN" runat="server" Text="Label">userName : </asp:Label> 
+                <asp:TextBox ID="username" runat="server" 
+                    Height="22px" Width="98px" CssClass="tb5"></asp:TextBox>
+                <asp:Label ID="usernamelogin" runat="server" Text="" Visible="false"></asp:Label>
+                <asp:LinkButton ID="logout" runat="server" Visible="false"  CssClass="myButton" Text="Signout"
+
+                    onclick="logout_Click" ></asp:LinkButton>
+                <br />
+                <br />
+                <asp:Label ID="passw" runat="server" Text="Label" >password :</asp:Label>  
+                <asp:TextBox ID="password" runat="server" Width="98px" TextMode="Password" CssClass="tb5"></asp:TextBox> 
+                <br />
+                <br />
+
+    <asp:Label ID="Label1" runat="server" Text="" ForeColor="Red" ></asp:Label>
+                <asp:Button ID="login" runat="server" Text="logIn" 
+                    onclick="login_Click"  CssClass="myButton" Height="30px" Width="77px"/>&nbsp;&nbsp;&nbsp;
+                    <asp:HyperLink ID="signUp" runat="server" NavigateUrl="~/signUp.aspx" 
+                    CssClass="myButton" Height="16px" Width="40px">SignUp</asp:HyperLink>
+            </div>
+    </div>
+
+   <div class="menu">
+        <asp:Menu ID="NavigationMenu" runat="server" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal" >
+            <Items>
+                <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" />
+               
+                <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
+
+                 <asp:MenuItem NavigateUrl="~/Forms.aspx" Text="Forms"/>
+            </Items>
+       </asp:Menu>
+       <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       
+       
+        
+        
+
+        
+      
+        <asp:Button ID="Add" runat="server" onclick="Add_Click" CssClass="myButton" 
+            Text="Add Article" Font-Size="Small" Height="30px" Width="115px"/> 
+    
+      
+        
+        <asp:Button ID="btnMedia" runat="server" PostBackUrl="~/AddMedia.aspx" 
+            CssClass="myButton" Text="Add Files" Width="115px" Font-Size="Small" 
+            Height="30px" onclick="btnMedia_Click"/><br /><br />
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+            <asp:Label ID="LableaddArticle" runat="server" Text="" ForeColor="Red"></asp:Label> 
+        
+    </div>
+    <br />
+    
+        <div class="Columns">
+        <div class="Column1">
+        <div class="Block">
+
+            <span class="BlockHeader"><span>Search For Article</span></span>
+
+            <div class="BlockContentBorderBorder">
+            <div class="BlockContentBorderBL"><div></div></div>
+            <div class="BlockContentBorderBR"><div></div></div>
+            <div class="BlockContentBorderTL"></div>
+            <div class="BlockContentBorderTR"><div></div></div>
+            <div class="BlockContentBorderT"></div>
+            <div class="BlockContentBorderR"><div></div></div>
+            <div class="BlockContentBorderB"><div></div></div>
+            <div class="BlockContentBorderL"></div>
+            <div class="BlockContentBorderC"></div>
+            <div class="BlockContentBorder">
+                <asp:TextBox ID="searchtxt" runat="server"></asp:TextBox>
+                
+               <br /><br />
+                <asp:Button ID="Searchbtn" runat="server" Text="Search" CssClass="myButton" onclick="Search_click" />
+              
+            </div></div>
+             </div>
+
+             <div class="Block">
+
+            <span class="BlockHeader"><span>News</span></span>
+
+            <div class="BlockContentBorderBorder">
+            <div class="BlockContentBorderBL"><div></div></div>
+            <div class="BlockContentBorderBR"><div></div></div>
+            <div class="BlockContentBorderTL"></div>
+            <div class="BlockContentBorderTR"><div></div></div>
+            <div class="BlockContentBorderT"></div>
+            <div class="BlockContentBorderR"><div></div></div>
+            <div class="BlockContentBorderB"><div></div></div>
+            <div class="BlockContentBorderL"></div>
+            <div class="BlockContentBorderC"></div>
+            <div class="BlockContentBorder">
+
+        
+            <marquee direction="Up" scrolldelay="20" style="font-size: 12pt; color: #000000; font-family: Verdana; width: 180px; font-weight: bold;" id="newsfile">
+                <asp:Label ID="Label4" runat="server" Text=""></asp:Label></marquee>
+                    &nbsp;
+        
+    
+       
+
+            </div></div>
+
+        </div>
+        </div>
+        <div class="Column2">
+        <div class="Block">
+
+            <span class="BlockHeader"><span>Recent Changes</span></span>
+
+            <div class="BlockContentBorderBorder">
+            <div class="BlockContentBorderBL"><div></div></div>
+            <div class="BlockContentBorderBR"><div></div></div>
+            <div class="BlockContentBorderTL"></div>
+            <div class="BlockContentBorderTR"><div></div></div>
+            <div class="BlockContentBorderT"></div>
+            <div class="BlockContentBorderR"><div></div></div>
+            <div class="BlockContentBorderB"><div></div></div>
+            <div class="BlockContentBorderL"></div>
+            <div class="BlockContentBorderC"></div>
+            <div class="BlockContentBorder">
+
+                <asp:Label ID="recentCh" runat="server" Text=""></asp:Label>
+
+            </div></div>
+
+        </div></div>
+   
+    <div class="MainColumn">
+        <div class="ArticleBorder">
+        <div class="ArticleBL" ><div></div></div>
+        <div class="ArticleBR"><div></div></div>
+        <div class="ArticleTL"></div>
+        <div class="ArticleTR"><div></div></div>
+        <div class="ArticleT"></div>
+        <div class="ArticleR"><div></div></div>
+        <div class="ArticleB"><div></div></div>
+        <div class="ArticleL"></div>
+        <div class="ArticleC"></div>
+        <div class="Article" id="searchres" runat="server">
+
+           <asp:ContentPlaceHolder id="content" runat="server" />
+        </div></div>
+        </br></br>
+        <div id="advertizments">
+     
+   <div style="background-color:#d7d7d7">
+
+	<!-- Start WOWSlider.com BODY section -->
+	<div id="wowslider-container1" style=height: 115px'>
+	<div class="ws_images"><ul>
+<li><a href="www.squ.edu.om"><img src="data1/images/ban49946.jpg" alt="ban49946" title="ban49946" id="wows1_0"/></a></li>
+<li><a href="www.squ.edu.om"><img src="data1/images/ban22215038.jpg" alt="ban22215038" title="ban22215038" id="wows1_1"/></a></li>
+<li><a href="www.squ.edu.om"><img src="data1/images/banner1.jpg" alt="banner1" title="banner1" id="wows1_2"/></a></li>
+<li><a href="www.squ.edu.om"><img src="data1/images/banner2348525.jpg" alt="banner2348525" title="banner2348525" id="wows1_3"/></a></li>
+<li><a href="www.squ.edu.om"><img src="data1/images/bannerfe56598.jpg" alt="bannerFE56598" title="bannerFE56598" id="wows1_4"/></a></li>
+<li><a href="www.squ.edu.om"><img src="data1/images/bus78235.jpg" alt="bus78235" title="bus78235" id="wows1_5"/></a></li>
+</ul></div>
+<div class="ws_bullets"><div>
+<a href="#" title="ban49946">1</a>
+<a href="#" title="ban22215038">2</a>
+<a href="#" title="banner1">3</a>
+<a href="#" title="banner2348525">4</a>
+<a href="#" title="bannerFE56598">5</a>
+<a href="#" title="bus78235">6</a>
+</div></div>
+
+	</div>
+	<script type="text/javascript" src="engine1/wowslider.js"></script>
+	<script type="text/javascript" src="engine1/script.js"></script>
+	<!-- End WOWSlider.com BODY section -->
+        
+        
+        
+        </div>
+        
+       </div> 
+        
+       </div>
+      <br /> <br />
+        <div class="Footer">
+            <asp:ContentPlaceHolder id="Footer" runat="server" />
+            <a href="ContactUs.aspx">Contact Us</a>
+            </div>
+        </div></div>
+    </form>
+</body>
+</html>
